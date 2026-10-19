@@ -1,7 +1,7 @@
 const jar = pm.cookies.jar();
 
 let baseUrl = pm.environment.get("baseUrl");
-let frontendUrl = pm.environment.get("fontendUrl");
+let frontendUrl = pm.environment.get("frontendUrl");
 
 jar.get(frontendUrl, "XSRF-TOKEN", (err, cookie) => {
     if (!err && cookie) {
